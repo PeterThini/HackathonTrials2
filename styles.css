@@ -1,0 +1,354 @@
+/* General Styles */
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #a36617;
+}
+
+/* Kenyan Flag Background with Waving Effect for About Us */
+#about {
+    position: relative;
+    padding: 50px;
+    color: white;
+    text-align: left;
+    z-index: 1;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Kenyan.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+    animation: wave 4s infinite linear;
+}
+
+/* Waving Flag Animation */
+@keyframes wave {
+    0% { background-position: 0 0; }
+    50% { background-position: 10px 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Header and Navigation */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+header img.court-of-arms {
+    width: 100px;
+    margin-top: 10px;
+}
+
+nav {
+    background-color: #006633;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #003366;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Button Styling */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Accountability Section Styling */
+#gen-z-accountability {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #27ae60;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#gen-z-accountability h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#gen-z-accountability ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+#gen-z-accountability ul li {
+    margin: 10px 0;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+#gen-z-accountability ul li::before {
+    content: "•";
+    color: #27ae60;
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#gen-z-accountability ul ul {
+    padding-left: 20px;
+}
+
+#gen-z-accountability ul ul li::before {
+    content: "–";
+    color: #3498db;
+    font-size: 1.2em;
+}
+
+/* Events Section */
+#events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
+    background: #f7f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Feedback Form Section */
+#feedback-form {
+    position: relative;
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgba(238, 228, 228, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a clean effect */
+}
+
+/* Feedback Form Heading */
+#feedback-form h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+#feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Input and Textarea Styling */
+#feedback-form input, 
+#feedback-form select, 
+#feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #160202;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Textarea Specific Styling */
+#feedback-form textarea {
+    resize: vertical; /* Allow vertical resize only */
+    min-height: 120px; /* Minimum height for the text area */
+}
+
+/* Submit Button Styling */
+#feedback-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    border: none;
+    color: rgb(2, 24, 13);
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+#feedback-form button:hover {
+    background-color: #2ecc71;
+}
+
+/* Responsive Feedback Form for Mobile Devices */
+@media (max-width: 600px) {
+    #feedback-form {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #660000; /* Dark blue background */
+    color: rgb(71, 28, 228);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content .social-media {
+    margin: 10px 0;
+}
+
+.footer-content .social-media a {
+    color: #27ae60; /* Green color for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Final Section Styling */
+#final {
+    height: auto; /* Allow section height to adjust based on content */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px 0; /* Add some padding for spacing */
+    background-color: #f4f4f9; /* Optional background color */
+}
+
+/* Styling for the text */
+#final p {
+    font-size: 2em; /* Slightly smaller font size */
+    font-weight: bold; /* Make it bold */
+    color: #27ae60; /* Initial color */
+    margin: 0; /* Remove default margin */
+    animation: dance 1.5s infinite; /* Apply dance animation */
+}
+
+/* Keyframe animation for dancing effect */
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at normal position */
+        color: #27ae60; /* Initial color */
+    }
+    25% {
+        transform: translateY(-10px); /* Move up */
+        color: #e74c3c; /* Change color */
+    }
+    50% {
+        transform: translateY(0); /* Return to normal */
+        color: #3498db; /* Change color */
+    }
+    75% {
+        transform: translateY(-10px); /* Move up again */
+        color: #f1c40f; /* Change color */
+    }
+}
+
+/* PayPal Button Styling */
+#paypalButtonContainer {
+    margin-bottom: 30px;
+}
+
+.paypal-button {
+    background-color: #ffc439;
+    color: #333;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.paypal-button:hover {
+    background-color: #e8b022;
+}
+
+/* M-Pesa Section Styling */
+.mpesa {
+    background-color: #beecd3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mpesa ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+.mpesa li {
+    margin-bottom: 10px;
+}
